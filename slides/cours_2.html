@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>cours_1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>cours_2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14259,88 +14259,78 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><span style="font-family:Papyrus; font-size:3em;">Algorithmique des tableaux</span></p>
-<p><span style="font-family:Papyrus; font-size:1.5em;">Christophe Saint-Jean</span></p>
-<p>Transparents du cours</p>
-<p>Code du cours</p>
-<p>Année 2020-2021</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Organisation-de-l'UE">Organisation de l'UE<a class="anchor-link" href="#Organisation-de-l'UE">&#182;</a></h1>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Mentions-L&#233;gales">Mentions L&#233;gales<a class="anchor-link" href="#Mentions-L&#233;gales">&#182;</a></h2><p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a>.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="L'&#233;quipe-enseignante">L'&#233;quipe enseignante<a class="anchor-link" href="#L'&#233;quipe-enseignante">&#182;</a></h2><ul>
-<li><strong>Christophe Saint-Jean</strong> (CM/TD/TP - Resp.)</li>
-<li>Laurent Mascarilla (TD/TP)</li>
-<li>El Hadi Zahzah (TD/TP)</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Communication">Communication<a class="anchor-link" href="#Communication">&#182;</a></h2><ul>
-<li>Questions pédagogiques : <a href="https://moodle.univ-lr.fr/">Moodle</a><ul>
-<li>Appronfondissement/Questions</li>
-<li>Organisation de l'UE/Planning</li>
-</ul>
-</li>
-<li>Questions administratives (Secrétariat)<ul>
-<li>Appartenance groupes TD/TP</li>
-<li>Absences/Justifications</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Dispositif-horaire">Dispositif horaire<a class="anchor-link" href="#Dispositif-horaire">&#182;</a></h2><p>On essaie tout en <strong>synchrone</strong>:</p>
+<p><span style="font-family:Papyrus; font-size:3em;">Cours 2</span></p>
+<p><span style="font-family:Papyrus; font-size:1.5em;">Le cours du jour traite des points suivants:</span></p>
 <ul>
-<li>6 cours de 1,5 heures</li>
-<li>4 TDs de 1,5 heures</li>
-<li>5 TPs de 1,5 heures</li>
-<li>4 créneaux de 1,5h de TEA - 2 sujets</li>
+<li>Fonctionnement des listes en Python</li>
+<li>Pourquoi parle t'on de liste au lieu de tableau</li>
+<li>Comment fonctionnent append et insert ?</li>
+<li>Quelle est leur efficacité respective ?</li>
+</ul>
+<p>On va parler de technique...</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Rappels-liste">Rappels liste<a class="anchor-link" href="#Rappels-liste">&#182;</a></h2><p>Une <strong>liste</strong> est une structure de données qui contient une séquence de valeurs.</p>
+<p>Syntaxe:</p>
+<div class="highlight"><pre><span></span><span class="p">[</span><span class="o">&lt;</span><span class="n">valeur_1</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">valeur_2</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">valeur_n</span><span class="o">&gt;</span><span class="p">]</span>
+</pre></div>
+<ul>
+<li>Les valeurs ne sont pas nécessairement de même type.</li>
+<li>Une liste est une séquence</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Evaluation">Evaluation<a class="anchor-link" href="#Evaluation">&#182;</a></h2>$$S_1 = \frac{CC_1+CC_2}{2}$$$$S_2 = CC_3$$<p>Les CC se passent <em>a priori</em> en TP 3 et 5 (idem semestre 1).</p>
-<p>Attention à la règle sur les absences.</p>
+<p><strong>Extrait de la documentation</strong></p>
+<ul>
+<li><p><strong>list.append(x)</strong> - <em>Add an item to the end of the list. Equivalent to a[len(a):] = [x].</em></p>
+</li>
+<li><p><strong>list.extend(iterable)</strong> - <em>Extend the list by appending all the items from the iterable. Equivalent to a[len(a):] = iterable.</em></p>
+</li>
+<li><p><strong>list.insert(i, x)</strong> - <em>Insert an item at a given position. The first argument is the index of the element before which to insert, so a.insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).</em></p>
+</li>
+<li><p><strong>list.remove(x)</strong> - <em>Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.</em></p>
+</li>
+<li><p><strong>list.pop([i])</strong> - <em>Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and returns the last item in the list.</em></p>
+</li>
+</ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Environnement-de-travail">Environnement de travail<a class="anchor-link" href="#Environnement-de-travail">&#182;</a></h2><ul>
-<li>Cours: <ul>
-<li>En direct: notebook</li>
-<li>Hors-ligne: pdf, html (parfois des pbs de conversion).</li>
+<h2 id="G&#233;n&#233;ralit&#233;s-sur-la-m&#233;moire">G&#233;n&#233;ralit&#233;s sur la m&#233;moire<a class="anchor-link" href="#G&#233;n&#233;ralit&#233;s-sur-la-m&#233;moire">&#182;</a></h2><ul>
+<li>La mémoire peut être vue comme un long ruban avec des zones protégées</li>
+<li>Chaque case mémoire (un octet) dispose d'une adresse propre.</li>
+<li>Le stockage d'une valeur peut prendre plusieurs octets (Ex.: mot de 8 octets)</li>
+<li>Certaines valeurs peuvent être de type "adresse" (8 octets ?).<br>
+On les représente symboliquement par une flèche.</li>
 </ul>
-</li>
-<li><p>TD:</p>
-<ul>
-<li>Support papier</li>
-<li>Eventuellement un IDE (Thonny)</li>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Tableau-en-m&#233;moire-(vers.-classique)">Tableau en m&#233;moire (vers. classique)<a class="anchor-link" href="#Tableau-en-m&#233;moire-(vers.-classique)">&#182;</a></h3><ul>
+<li>Usuellement un ensemble de cases <strong>contigues</strong> en mémoire de <strong>même taille</strong>.</li>
+<li>On fait de l'arithmétique avec la taille d'un objet pour trouver la position d'un élément:
+$$@T[i] = @T[0] + i * taille(element)$$</li>
 </ul>
-</li>
-<li><p>TP/TEA:</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>Un IDE (thonny)</li>
+<li>Avantage: Accès direct (rapide) à un élément.</li>
+<li>Inconvénient: Pas idéal pour des mises à jour:<ul>
+<li>Ajout: décalage si pas à la fin</li>
+<li>Insertion/ suppression: décalage/suppression.</li>
 </ul>
 </li>
 </ul>
@@ -14349,114 +14339,11 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Les-objectifs-de-cet-enseignement">Les objectifs de cet enseignement<a class="anchor-link" href="#Les-objectifs-de-cet-enseignement">&#182;</a></h2><ul>
-<li>Initiation à l'algorithmique<ul>
-<li>Qu'est ce qu'un algorithme ?</li>
-<li>Différence algorithme / programme (cf. TD)</li>
-<li>Initiation à l'analyse d'un algorithme.</li>
-</ul>
-</li>
-<li>Approfondir vos connaissances sur :<ul>
-<li>les listes, tableaux, fonctions.</li>
-<li>le langage Python.</li>
-</ul>
-</li>
-<li>Découvrir des algorithmes simples et les analyser.</li>
-<li>Initiation à la récursivité.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="G&#233;n&#233;ralit&#233;s-sur-l'algorithmique">G&#233;n&#233;ralit&#233;s sur l'algorithmique<a class="anchor-link" href="#G&#233;n&#233;ralit&#233;s-sur-l'algorithmique">&#182;</a></h1>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Analogie-algorithme/recette">Analogie algorithme/recette<a class="anchor-link" href="#Analogie-algorithme/recette">&#182;</a></h2><ol>
-<li>Mettez la farine dans un saladier avec le sel et le sucre.</li>
-<li>Faites un puits au milieu et versez-y les œufs légèrement battus à la fourchette.</li>
-<li>Commencez à incorporer doucement la farine avec une cuillère en bois. Quand le mélange devient épais, ajoutez le lait froid petit à petit.</li>
-<li>Quand tout le lait est mélangé, la pâte doit être assez fluide, si elle vous paraît trop épaisse, rajoutez un peu de lait. Ajoutez ensuite le beurre fondu, mélangez bien.</li>
-<li>Faites cuire les crêpes dans une poêle chaude.</li>
-<li>Répétez jusqu'à épuisement de la pâte.</li>
-</ol>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>On attend:</p>
-<ul>
-<li>Langage de description intelligible</li>
-<li>Instructions séquentielles, fonctions, répétitives.</li>
-</ul>
-<p>On distingue bien:</p>
-<ul>
-<li>la recette (l'algorithme) </li>
-<li>de sa mise en oeuvre (traduction dans un langage de programmation =: Implémentation)</li>
-<li>aux moyens d'ustentiles de cuisine (variables, structures de données, fonctions, ...) </li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Algorithme-(D&#233;finition)">Algorithme (D&#233;finition)<a class="anchor-link" href="#Algorithme-(D&#233;finition)">&#182;</a></h2><p>Une définition formelle:</p>
-<p><code>Un algorithme est la description d’une méthode de calcul qui, à partir d’un ensemble de données d’entrée (problème) et une suite finie d'étapes, produit un ensemble de données en sortie (solution).</code></p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><code>Un algorithme est la description d’une méthode de calcul ...</code></p>
-<p><strong><em>Description</em></strong></p>
-<p>On doit décrire chaque fonction (sous-algorithmes) non triviale et structures de données employées</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong><em>Méthode de calcul</em></strong></p>
-<p>Il ne peut résoudre que des problèmes calculables.
-On démontre que certains problèmes ne sont pas calculables (décidables).</p>
-<p>Ex.: <a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_de_l%27arr%C3%AAt">Problème de l'arrêt</a> (-&gt; L3)</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><code>Un algorithme est .... et une suite finie d'étapes, produit un ensemble de données en sortie (solution).</code></p>
-<p><strong><em>Une suite finie d'étapes</em></strong></p>
-<p>Attention, ne pas confondre:</p>
-<ul>
-<li>Une séquence d’instructions qui se termine.</li>
-<li>Une description de longueur finie ⇒ possibilité de boucle infinie.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong><em>Solution</em></strong></p>
-<p>L'algorithme apporte t'il une solution au problème posé ?</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Algorithmique-(D&#233;finition)">Algorithmique (D&#233;finition)<a class="anchor-link" href="#Algorithmique-(D&#233;finition)">&#182;</a></h2><p><code>L'algorithmique est la science qui étudie les algorithmes pour eux-même indépendamment de tout langage de programmation.</code></p>
-<p>d'après "Al Khwarizmi", surnom du mathématicien arabe <a href="https://fr.wikipedia.org/wiki/Al-Khw%C3%A2rizm%C3%AE">Muhammad Ibn Musa</a> (IX siècle).</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Algorithmique-(Histoire-de-calculs)">Algorithmique (Histoire de calculs)<a class="anchor-link" href="#Algorithmique-(Histoire-de-calculs)">&#182;</a></h3><p>L'algorithmique et les algorithmes sont bien antérieurs à l'informatique:</p>
-<ul>
-<li>Abaques grecques, romaines, chinoises (arithmétique simple, <a href="https://fr.wikipedia.org/wiki/Algorithme_de_la_potence">racines carrées</a>)</li>
-<li><a href="https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide">PGCD d'Euclide</a>, <a href="https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne">Crible d'Ératosthène</a> (IIIème siècle av. J.-C.)</li>
+<h3 id="Liste-simplement-(ou-doublement)-chain&#233;e-(vers.-classique)">Liste simplement (ou doublement) chain&#233;e (vers. classique)<a class="anchor-link" href="#Liste-simplement-(ou-doublement)-chain&#233;e-(vers.-classique)">&#182;</a></h3><ul>
+<li>Usuellement un ensemble de cases <strong>non contigues</strong> en mémoire.</li>
+<li>Chaque élément connait son successeur (et prédecesseur si doublement chainée).</li>
+<li>Dispersion des éléments en mémoire.</li>
+<li>Une valeur spéciale indique la fin (et le début) de liste.</li>
 </ul>
 
 </div>
@@ -14464,356 +14351,74 @@ On démontre que certains problèmes ne sont pas calculables (décidables).</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li><a href="https://fr.wikipedia.org/wiki/Soroban">Boulier japonais</a> (XIIIème siècle)</li>
+<li>Avantage: idéal pour des mises à jour (ajout, insertion, suppression)</li>
+<li>Inconvénient: Accès séquentiel à un élément (très lent si longue liste)</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>Tableau ou Liste</strong>:</p>
 <ul>
-<li><a href="https://fr.wikipedia.org/wiki/Pascaline">Pascaline</a> (1646)</li>
+<li>On doit faire un compromis entre efficacité de l'accès et des mises à jour.</li>
+<li>Dépend des langages de programmation (Python vs C)</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li><a href="https://fr.wikipedia.org/wiki/M%C3%A9tier_Jacquard">Métier à tisser programmable Jacquard</a> (18ième siècle)</li>
-</ul>
-
+<h2 id="Listes-(=-Tableaux)-en-Python">Listes (= Tableaux) en Python<a class="anchor-link" href="#Listes-(=-Tableaux)-en-Python">&#182;</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Algorithme de cryptographie, Traitement des données, Algorithmique optique/quantique</li>
-</ul>
-
+<h3 id="Tests-pr&#233;liminaires">Tests pr&#233;liminaires<a class="anchor-link" href="#Tests-pr&#233;liminaires">&#182;</a></h3>
 </div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Questions-de-l&#8217;algorithmique">Questions de l&#8217;algorithmique<a class="anchor-link" href="#Questions-de-l&#8217;algorithmique">&#182;</a></h3><ol>
-<li>L’algorithme A est t'il correct pour un problème P (toutes instances) ?</li>
-</ol>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ol>
-<li>L’algorithme A se termine t’il ?</li>
-</ol>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ol>
-<li>L’algorithme A est t’il plus efficace qu’un algorithme B ?</li>
-</ol>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Parallèlement, des questions plus fondamentales:</p>
-<ul>
-<li>Est il possible de trouver un algorithme qui résoud un problème P ? (Décidabilité)</li>
-<li>Si, oui existe t’il un algorithme efficace résoud un problème P ? (Classes de complexité)</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Exemples-d'algorithmes-(cf.-S1)">Exemples d'algorithmes (cf. S1)<a class="anchor-link" href="#Exemples-d'algorithmes-(cf.-S1)">&#182;</a></h3><p><img src="images/max.png" alt="max"></p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/pi.png" alt="approxpi"></p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Description-d'un-algorithme">Description d'un algorithme<a class="anchor-link" href="#Description-d'un-algorithme">&#182;</a></h2><p>On utilisera un langage de description d'un algorithme appelé <strong>pseudo-code</strong>.</p>
-<p><strong>Caractérisques du pseudo-code</strong></p>
-<ul>
-<li>Il ne doit pas être attaché la syntaxe d'un langage informatique particulier.</li>
-<li>Il doit être lisible par un non-programmeur.</li>
-<li>Être capable de décrire les structures de contrôle des langages impératifs (If, While, For, ...).</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="L'interface-de-l'algorithme">L'interface de l'algorithme<a class="anchor-link" href="#L'interface-de-l'algorithme">&#182;</a></h3><p><strong>Quelques sont les entrées attendues par l'algorithme ?</strong></p>
-<ul>
-<li>Type : Nombre, Tableau, Liste, Arbre, etc ...</li>
-<li>Taille : nombre de bits, nombre d'éléments du tableau, nombre de feuilles, ...</li>
-<li>Propriétés : entiers positifs, tableau trié, ...</li>
-</ul>
-<p><strong>Que fait/produit l'algorithme ?</strong></p>
-<ul>
-<li><em>Idem</em> que sur les entrées</li>
-<li>Description textuelle (éventuelle) de l'algorithme</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Les-types-utilisables">Les types utilisables<a class="anchor-link" href="#Les-types-utilisables">&#182;</a></h3><p>Types de données élémentaires :</p>
-<ul>
-<li>Variables simples : booléen, entier, réel, caractère</li>
-<li>Tableaux</li>
-<li><em>Pointeurs</em></li>
-</ul>
-<p>Cela permet de définir des structures de plus haut niveau:</p>
-<ul>
-<li>Chaîne de caractères</li>
-<li>Ensemble, Collection</li>
-<li>Liste, <em>table de hachage</em></li>
-<li><em>Graphes, ...</em></li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Quelques-instructions-du-pseudo-code">Quelques instructions du pseudo-code<a class="anchor-link" href="#Quelques-instructions-du-pseudo-code">&#182;</a></h3><ul>
-<li>Affectation : &lt;-</li>
-<li>Test : =</li>
-<li>Opérations arithmétiques : +,-,*,/</li>
-<li>Séparateur d’instructions : ” ;”</li>
-<li>Elements d’un tableau T : ”T[i]” (convention 1..n !!)</li>
-<li>Adresse d’une variable ”@”</li>
-<li>Instruction de retour : Retourner &lt;val. sortie&gt;</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li><p>Le branchement conditionnel :</p>
-
-<pre><code>Si &lt;condition&gt; alors  
-  &lt;blocsi&gt;  
-sinon  
-  &lt;blocsinon&gt;
-fin</code></pre>
-</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Les itératives et les répétitives:</li>
-</ul>
-
-<pre><code>   Pour i &lt;- 1 à n [par pas de 1] faire  
-       &lt;bloc&gt;  
-   fin
-
-   Tant que &lt;condition&gt; faire
-       &lt;bloc&gt;  
-   fin</code></pre>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Langage-de-description-et-Python">Langage de description et Python<a class="anchor-link" href="#Langage-de-description-et-Python">&#182;</a></h3><ul>
-<li>Le langage Python a été conçu pour être le plus lisible et naturel possible.</li>
-<li>On est très proche du langage de description (raccourci en TD)</li>
-<li><strong>Un algorithme devient une fonction !!</strong> </li>
-</ul>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-    <span class="n">maxi</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">Ti</span> <span class="ow">in</span> <span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
-        <span class="k">if</span> <span class="n">maxi</span> <span class="o">&lt;</span> <span class="n">Ti</span><span class="p">:</span>
-            <span class="n">maxi</span> <span class="o">=</span> <span class="n">Ti</span>
-    <span class="k">return</span> <span class="n">maxi</span>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tqdm.notebook</span> <span class="kn">import</span> <span class="n">tqdm_notebook</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mf">5.5</span><span class="p">)</span>
 </pre></div>
 
+     </div>
 </div>
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>En C++</strong></p>
-<div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span> <span class="n">T</span> <span class="n">max</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">*</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">T</span> <span class="n">result</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-      <span class="k">if</span><span class="p">(</span><span class="n">result</span> <span class="o">&lt;</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-  <span class="p">}</span>
-</pre></div>
+</div>
 
 </div>
-</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>En Assembleur</strong></p>
-<p><img src="images/max_asm.png" alt="asm"></p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="De-l'importance-d'une-bonne-description">De l'importance d'une bonne description<a class="anchor-link" href="#De-l'importance-d'une-bonne-description">&#182;</a></h3><p><img src="images/max_trie.png" alt="Maximum Trié"></p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Analyse:-Preuve-de-terminaison">Analyse: Preuve de terminaison<a class="anchor-link" href="#Analyse:-Preuve-de-terminaison">&#182;</a></h2><ul>
-<li>Vérifier que chaque instruction simple se termine:<ul>
-<li>calcul simple, affectation OK</li>
-<li>affichage OK</li>
-<li>Appel de fonction -&gt; vérifier la fonction</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><strong>Sondage</strong>:</p>
+<p>Après n appels à <em>append</em> ou <em>insert</em>, que prévoyez vous ?</p>
 <ul>
-<li>Instruction Si : vérifier la condition et les deux branches possibles</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Pour les boucles for,  s'assurer que la séquence parcourue est taille finie.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Pour la répétitive While, s'assurer que dans tous les cas que la condition de continuation sera fausse au moins une fois (critère math. parfois).</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Pour les algorithmes récursifs (plus tard), on doit s'assurer que la récursion se termine</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/max.png" alt="max"></p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Analyse:-Preuve-de-correction">Analyse: Preuve de correction<a class="anchor-link" href="#Analyse:-Preuve-de-correction">&#182;</a></h2><p>Il est question de prouver que l'algorithme fait ce qu'il dit faire !</p>
-<p>On utilise souvent un invariant de boucle et la preuve par récurrence.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Pour des algorithmes concernant un tableau T[1..n], la démarche (simplifiée) est généralement la suivante:</p>
-<ul>
-<li>Soit i l'indice du parcours de T  (c.a.d. T[i])</li>
-<li>Avant l'itération, quelle propriété vérifie la variable qui sera retournée par rapport à T[1..i-1] ?</li>
-<li>Après l'itération, cette propriété reste t'elle vraie pour T[1..i] ?</li>
-<li>L'initialisation de la variable est elle compatible à la propriété ?</li>
-</ul>
-<p>On a donc les deux éléments d'une récurrence: Initialisation et Hérédité.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/max.png" alt="max"></p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Analyse-:-Complexit&#233;-algorithmique-(asymptotique)">Analyse : Complexit&#233; algorithmique (asymptotique)<a class="anchor-link" href="#Analyse-:-Complexit&#233;-algorithmique-(asymptotique)">&#182;</a></h2><p>L'algorithme est il rapide ?</p>
-<p>Pour un tableau T de taille <em>n</em>, la rapidité <em>devrait</em> dépendre de:</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li><em>n</em> la taille <em>T</em> (des données).</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>d'une propriété, du contenu de <em>T</em>.</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>du langage de programmation ?</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>des ressources machine (CPU, mémoire, ...)</li>
-</ul>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Les outils du jour:</strong></p>
-<ul>
-<li>Mesurer le temps d'exécution du programme implémentant l'algorithme (module time)</li>
-<li>Tracer une courbe (module matplotlib)</li>
-<li>Le module tqdm</li>
+<li>Append est plus rapide</li>
+<li>Insert est plus rapide</li>
+<li>Tous les deux prennent le même temps</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span><span class="p">,</span> <span class="n">sleep</span>
-
-<span class="n">debut</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
-<span class="c1"># votre code ici</span>
-<span class="c1"># sleep(2)</span>
-<span class="n">fin</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
-<span class="n">duree</span> <span class="o">=</span> <span class="n">fin</span> <span class="o">-</span> <span class="n">debut</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Duree: &quot;</span><span class="p">,</span> <span class="n">duree</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">tps_append</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">tqdm_notebook</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)):</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>          <span class="c1"># nombre aléatoire</span>
+    <span class="n">debut</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span> 
+    <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>                         <span class="c1"># append</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
+    <span class="n">tps_append</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fin</span> <span class="o">-</span> <span class="n">debut</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14832,33 +14437,77 @@ fin</code></pre>
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Duree:  2.0041921138763428
-</pre>
-</div>
+
+
+
+
+
+<div id="7a731368-1594-4c69-83c1-722fa52f507b" class="jupyter-widgets jp-OutputArea-output ">
+<script type="text/javascript">
+var element = document.getElementById('7a731368-1594-4c69-83c1-722fa52f507b');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "771dc5142f274f37ada1cfeec1fffef7", "version_major": 2, "version_minor": 0}
+</script>
 </div>
 
 </div>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
-    <span class="n">maxi</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">Ti</span> <span class="ow">in</span> <span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
-        <span class="k">if</span> <span class="n">maxi</span> <span class="o">&lt;</span> <span class="n">Ti</span><span class="p">:</span>
-            <span class="n">maxi</span> <span class="o">=</span> <span class="n">Ti</span>
-    <span class="k">return</span> <span class="n">maxi</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">tps_insert</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">tqdm_notebook</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)):</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>       <span class="c1"># position aléatoire</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>          <span class="c1"># nombre aléatoire</span>
+    <span class="n">debut</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
+    <span class="n">L</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>                   <span class="c1"># insert</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
+    <span class="n">tps_insert</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fin</span> <span class="o">-</span> <span class="n">debut</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+
+
+<div id="4bf43880-23ea-4584-b245-62c5f3ae9f42" class="jupyter-widgets jp-OutputArea-output ">
+<script type="text/javascript">
+var element = document.getElementById('4bf43880-23ea-4584-b245-62c5f3ae9f42');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "8a8171d7d71b405c869fb8d3115250e0", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14867,61 +14516,12 @@ fin</code></pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span><span class="p">,</span> <span class="n">sleep</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
 
-<span class="n">T</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="p">[],</span> <span class="mi">10_000_000</span>
-<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">T</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100_000</span><span class="p">))</span>
-    
-<span class="n">debut</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
-<span class="n">_</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
-<span class="n">fin</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
-<span class="n">duree</span> <span class="o">=</span> <span class="n">fin</span> <span class="o">-</span> <span class="n">debut</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Duree: &quot;</span><span class="p">,</span> <span class="n">duree</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Duree:  0.5535769462585449
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># a installer</span>
-
-<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
-<span class="n">x1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
-<span class="n">x2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="c1">#plt.show()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tps_insert</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;insert&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tps_append</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;append&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -14944,7 +14544,7 @@ fin</code></pre>
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -14955,131 +14555,32 @@ fin</code></pre>
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Conclusions partielles:</p>
+<ul>
+<li><strong>append</strong> bien plus rapide qu'<strong>insert</strong></li>
+<li><strong>append</strong>: le temps semble indépendent de la taille de la liste</li>
+<li><strong>insert</strong>: le temps croît la taille de la liste</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Liste-et-m&#233;moire-en-Python">Liste et m&#233;moire en Python<a class="anchor-link" href="#Liste-et-m&#233;moire-en-Python">&#182;</a></h3><p>Une liste étant un objet, même une liste vide doit occupé de la place:</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># tqdm a installer</span>
-<span class="c1">#from tqdm import tqdm                   # programme python classique</span>
-<span class="kn">from</span> <span class="nn">tqdm.notebook</span> <span class="kn">import</span> <span class="n">tqdm</span>           <span class="c1"># dans un notebook</span>
-<span class="c1">#from tqdm.gui import tqdm               # pour thonny</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;Boucle sur i&#39;</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span> <span class="n">desc</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Boucle sur j&#39;</span><span class="p">,</span> <span class="n">leave</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-        <span class="n">duree_sommeil</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">sleep</span><span class="p">(</span><span class="n">duree_sommeil</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-
-
-<div id="83580e8c-d1d1-46e3-abde-a3bdda549c75" class="jupyter-widgets jp-OutputArea-output ">
-<script type="text/javascript">
-var element = document.getElementById('83580e8c-d1d1-46e3-abde-a3bdda549c75');
-</script>
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "162ce65c100e4a5185a64f5b31dc30a3", "version_major": 2, "version_minor": 0}
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-
-
-<div id="a623d4bc-5b2e-41df-82c2-4824326dc00d" class="jupyter-widgets jp-OutputArea-output ">
-<script type="text/javascript">
-var element = document.getElementById('a623d4bc-5b2e-41df-82c2-4824326dc00d');
-</script>
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "", "version_major": 2, "version_minor": 0}
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-
-
-<div id="edb02d58-3901-412c-b1d2-8c99891bd67d" class="jupyter-widgets jp-OutputArea-output ">
-<script type="text/javascript">
-var element = document.getElementById('edb02d58-3901-412c-b1d2-8c99891bd67d');
-</script>
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "28ff2472b6e94a38ac66b882c1b0e93d", "version_major": 2, "version_minor": 0}
-</script>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-10-2a35daf1202a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span>     <span class="ansi-green-fg">for</span> j <span class="ansi-green-fg">in</span> tqdm<span class="ansi-blue-fg">(</span>range<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">30</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> desc<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">f&#39;Boucle sur j&#39;</span><span class="ansi-blue-fg">,</span> leave<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     10</span>         duree_sommeil <span class="ansi-blue-fg">=</span> randint<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 11</span><span class="ansi-red-fg">         </span>sleep<span class="ansi-blue-fg">(</span>duree_sommeil<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>./run.sh
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">getsizeof</span> <span class="k">as</span> <span class="n">sof</span>    <span class="c1">## Nombre d&#39;octets en mémoire</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Entier: </span><span class="si">{</span><span class="n">sof</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Liste vide: </span><span class="si">{</span><span class="n">sof</span><span class="p">([])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15099,7 +14600,8 @@ var element = document.getElementById('edb02d58-3901-412c-b1d2-8c99891bd67d');
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[NbConvertApp] Converting notebook complet.ipynb to notebook
+<pre>Entier: 24
+Liste vide: 56
 </pre>
 </div>
 </div>
@@ -15108,18 +14610,674 @@ var element = document.getElementById('edb02d58-3901-412c-b1d2-8c99891bd67d');
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Ne pas oublier que ce sont des objets avec des méthodes ...</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#dir([])</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 8 octets par valeur de plus</span>
+<span class="n">sof</span><span class="p">([]),</span> <span class="n">sof</span><span class="p">([</span><span class="mi">1</span><span class="p">]),</span> <span class="n">sof</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]),</span> <span class="n">sof</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(56, 64, 72, 80)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Et ce quel soit le type et ses valeurs</span>
+<span class="n">sof</span><span class="p">([]),</span> <span class="n">sof</span><span class="p">([</span><span class="s2">&quot;lepetitchat&quot;</span><span class="p">]),</span> <span class="n">sof</span><span class="p">([</span><span class="s2">&quot;le&quot;</span><span class="p">,</span> <span class="s2">&quot;petit&quot;</span><span class="p">]),</span> <span class="n">sof</span><span class="p">([</span><span class="s2">&quot;le&quot;</span><span class="p">,</span> <span class="s2">&quot;petit&quot;</span><span class="p">,</span> <span class="s2">&quot;chat&quot;</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(56, 64, 72, 80)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Même en mélangeant les types</span>
+<span class="n">sof</span><span class="p">([]),</span> <span class="n">sof</span><span class="p">([</span><span class="s2">&quot;lepetitchat&quot;</span><span class="p">]),</span> <span class="n">sof</span><span class="p">([</span><span class="s2">&quot;le&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;petit&quot;</span><span class="p">]]),</span> <span class="n">sof</span><span class="p">([</span><span class="s2">&quot;le&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;petit&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;chat&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">]])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(56, 64, 72, 80)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Python ne stocke donc pas directement les valeurs dans la liste mais des <strong>références</strong> vers les données:</p>
+<ul>
+<li>Liste = Tableau d'adresses vers les élements de la liste</li>
+<li>Le type des éléments de la liste n'est pas connue de la liste</li>
+<li>Cela optimise la place mémoire (intéressant pour la copie, pour <strong>insert</strong>) </li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Que faire si la taille initialement prévue est trop petite (insert ou append) ?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Le système cherche un nouvel emplacement plus grand (peu couteux)</li>
+<li>Il recopie l'ancien contenu. De plus en plus couteux au fur et à mesure que le tableau croît.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>La croissance de la taille d'une liste est gérée par la <a href="https://github.com/python/cpython/blob/master/Objects/listobject.c">règle</a>:</p>
+
+<pre><code>    new_allocated = newsize + newsize // 8 + 3 si newsize &lt; 9 (+6 sinon)
+    new_allocated ~ 1.125 * newsize
+
+</code></pre>
+<p>Cela donne 0, 4=1+3, 8=5+3, 16=9+1+6, 25=17+2+9, ...</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">allocated</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">size</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">size</span> <span class="o">&lt;=</span> <span class="n">allocated</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">allocated</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">allocated</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">newsize</span>  <span class="o">=</span> <span class="n">size</span> <span class="o">+</span> <span class="n">size</span> <span class="o">//</span> <span class="mi">8</span>
+        <span class="k">if</span> <span class="n">size</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">:</span>
+            <span class="n">allocated</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newsize</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">allocated</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newsize</span><span class="o">+</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>            
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">allocated</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Aparté: Principe identique pour les autres types</p>
+<table>
+<thead><tr>
+<th>Octets</th>
+<th>type</th>
+<th>scaling notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>28</td>
+<td>int</td>
+<td>+4 bytes about every 30 powers of 2</td>
+</tr>
+<tr>
+<td>49</td>
+<td>str</td>
+<td>+1-4 per additional character (depending on max width)</td>
+</tr>
+<tr>
+<td>40</td>
+<td>tuple</td>
+<td>+8 per additional item</td>
+</tr>
+<tr>
+<td>64</td>
+<td>list</td>
+<td>+8 per additional item</td>
+</tr>
+<tr>
+<td>240</td>
+<td>dict</td>
+<td>6th increases to 368; 22nd, 1184; 43rd, 2280; 86th, 4704; 171st, 9320</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sof</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">sof</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">sof</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">30</span><span class="p">),</span> <span class="n">sof</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">60</span><span class="p">),</span> <span class="n">sof</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">90</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sof</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">),</span> <span class="n">sof</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">),</span> <span class="n">sof</span><span class="p">(</span><span class="s2">&quot;aa&quot;</span><span class="p">),</span> <span class="n">sof</span><span class="p">(</span><span class="s2">&quot;aaa&quot;</span><span class="p">),</span> <span class="n">sof</span><span class="p">(</span><span class="s2">&quot;aaaa&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sof</span><span class="p">(</span><span class="nb">tuple</span><span class="p">()),</span> <span class="n">sof</span><span class="p">((</span><span class="mi">1</span><span class="p">,)),</span> <span class="n">sof</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)),</span> <span class="n">sof</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)),</span> <span class="n">sof</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>24 28 32 36 40
+49 50 51 52 53
+40 48 56 64 72
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Que faire si la taille initialement prévue est trop grand ?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>La décroissance de la taille d'une liste est gérée par la <a href="https://github.com/python/cpython/blob/master/Objects/listobject.c">règle</a>:</p>
+
+<pre><code>    si new_size &lt; allocated //2 alors on réalloue
+    sinon on garde l'allocation inchangée.</code></pre>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Ajout-en-t&#234;te">Ajout en t&#234;te<a class="anchor-link" href="#Ajout-en-t&#234;te">&#182;</a></h3><p>Quel est la meilleure solution pour le "prepend" (ajout en tête) rapide de plusieurs élements ?</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Insertion systématique en position 0. Non !</li>
+<li>Append pour chaque élement puis reverse à la fin.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Conclusion-(le-transparent-le-plus-important-du-cours-2)">Conclusion (le transparent le plus important du cours 2)<a class="anchor-link" href="#Conclusion-(le-transparent-le-plus-important-du-cours-2)">&#182;</a></h3><p>Quelles sont les méthodes lentes et rapides parmi:</p>
+<p>L[index], insert(index, objet),</p>
+<p>pop(), pop(index),</p>
+<p>remove(valeur), L.append(valeur),</p>
+<p>index(valeur)</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Rapide:</p>
+<ul>
+<li>L[index]: simple calcul arithmétique</li>
+<li>L.append: ajout en fin + ev. réallocation (rare)</li>
+<li>pop(): supprime en fin + ev. réallocation (rare)</li>
+</ul>
+<p>Lent:</p>
+<ul>
+<li>insert(index, objet) : décalage</li>
+<li>index(valeur): parcours jusqu'a trouve</li>
+<li>remove(valeur): parcours jusqu'a trouve + décalage (parcours entier)</li>
+<li>pop(index) ou del L[index]: décalage</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Compl&#233;ments-sur-les-listes">Compl&#233;ments sur les listes<a class="anchor-link" href="#Compl&#233;ments-sur-les-listes">&#182;</a></h2><h3 id="Listes-en-compr&#233;hension">Listes en compr&#233;hension<a class="anchor-link" href="#Listes-en-compr&#233;hension">&#182;</a></h3>
+<pre><code>      L = [expression(x) for x in iterable if condition(x)]</code></pre>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>où <em>iterable</em> est une séquence (liste, range, chaine, ...)</p>
+<ul>
+<li>La condition est optionnelle.</li>
+<li>Le résultat est une liste.</li>
+<li>En général sur une seule ligne.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Quelques usages:</p>
+<ul>
+<li>Construire une liste à partir de <em>range</em>.</li>
+<li>Créer une liste à partir d'une autre (filtrage)</li>
+<li>Se substituer à un <em>for</em> simple.</li>
+<li>Une liste de listes.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Parcours-simultan&#233;-de-plusieurs-listes-avec-zip">Parcours simultan&#233; de plusieurs listes avec <em>zip</em><a class="anchor-link" href="#Parcours-simultan&#233;-de-plusieurs-listes-avec-zip">&#182;</a></h3>
+<pre><code>     zip(*iterables)</code></pre>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>où *iterables désigne 0, 1, 2, ... objets iterables (liste, chaine, dict, ...)</p>
+<ul>
+<li>le type retourné est <em>zip</em> qui est iterable ;)</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="nb">zip</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>zip</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="s1">&#39;---&#39;</span><span class="p">,</span> <span class="n">e2</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>2 --- m
+3 --- e
+5 --- t
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">e1</span><span class="p">,</span> <span class="s1">&#39;---&#39;</span><span class="p">,</span> <span class="n">e2</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>0 : 2 --- m
+1 : 3 --- e
+2 : 5 --- t
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>On s'arrête sur la plus courte séquence:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">e1</span><span class="p">,</span> <span class="n">e2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="s1">&#39;---&#39;</span><span class="p">,</span> <span class="n">e2</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>2 --- m
+3 --- e
+5 --- t
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Autre approche possible (sans zip):</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">L2</span><span class="p">))):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;---&#39;</span><span class="p">,</span> <span class="n">L2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>2 --- m
+3 --- e
+5 --- t
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Cela devient difficile de faire mieux que:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">]</span>
+<span class="n">L3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="o">**</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="n">L4</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span>
+
+<span class="k">for</span> <span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">,</span> <span class="n">e3</span><span class="p">,</span> <span class="n">e4</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="n">L2</span><span class="p">,</span> <span class="n">L3</span><span class="p">,</span> <span class="n">L4</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="s1">&#39;---&#39;</span><span class="p">,</span> <span class="n">e2</span><span class="p">,</span> <span class="s1">&#39;---&#39;</span><span class="p">,</span> <span class="n">e3</span><span class="p">,</span> <span class="s1">&#39;---&#39;</span><span class="p">,</span> <span class="n">e4</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>2 --- m --- 1 --- True
+3 --- e --- 2 --- True
+5 --- t --- 4 --- False
+6 --- i --- 8 --- True
+1 --- e --- 16 --- True
+4 --- r --- 32 --- False
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
