@@ -19,6 +19,7 @@ def levenshteinDistance(str1, str2):
     ratio = (lensum - ldist) / lensum
     return {'distance': ldist, 'ratio': ratio}
 
-
-print(levenshteinDistance("kitten", "sitting"))
-print(levenshteinDistance("rosettacode", "raisethysword"))
+if __name__ == "__main__":
+    print(levenshteinDistance("maison", "maison"))
+    print(levenshteinDistance("pratikabe", "praticable"))
+    

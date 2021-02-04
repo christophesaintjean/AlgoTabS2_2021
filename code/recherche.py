@@ -1,3 +1,5 @@
+# Td1 Exo 2
+
 def recherche(T, req):
     for i in range(0, len(T)):
         if T[i] == req:

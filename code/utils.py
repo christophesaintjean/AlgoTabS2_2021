@@ -1,3 +1,4 @@
+# Td2 Exo 1
 def estTrie(T, deb=0, fin=None):
     if fin is None:
         fin = len(T)

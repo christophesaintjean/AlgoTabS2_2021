@@ -1,3 +1,6 @@
+# Td1 Exo 3
+# TP1 Exo 2
+
 from time import time
 from random import randint
 import matplotlib.pyplot as plt
